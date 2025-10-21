@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-gradient-to-br from-soul-dark to-soul-dark-alt text-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glow-button {
+    @apply relative bg-gradient-to-r from-soul-purple to-soul-pink rounded-full px-8 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,110,199,0.6)] active:scale-95;
+  }
+
+  .soul-card {
+    @apply bg-gradient-to-br from-soul-dark-alt/80 to-soul-purple/20 backdrop-blur-lg rounded-2xl border border-soul-purple/30 transition-all duration-300 hover:border-soul-pink/50 hover:shadow-[0_0_40px_rgba(255,110,199,0.3)];
+  }
+
+  .aura-ring {
+    @apply absolute inset-0 rounded-full opacity-50 animate-pulse-glow;
+  }
+
+  .floating-particle {
+    @apply absolute w-2 h-2 bg-soul-teal rounded-full opacity-30 animate-float;
+  }
+}
