@@ -4,6 +4,7 @@ import App from './App.tsx';
 import '@coinbase/onchainkit/styles.css';
 import './index.css';
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
