@@ -1,17 +1,21 @@
 {
+  "frame": {
+    "name": "ĀtmaMālā ",
+    "version": "1",
+    "iconUrl": "https://atma-mala.vercel.app/amii.png",
+    "homeUrl": "https://atma-mala.vercel.app",
+    "imageUrl": "https://atma-mala.vercel.app/ammm.png",
+    "splashImageUrl": "https://atma-mala.vercel.app/amii.png",
+    "splashBackgroundColor": "#4B0082",
+    "webhookUrl": "https://atma-mala.vercel.app/api/webhook",
+    "subtitle": "Discover Your Soul",
+    "description": "ĀtmaMālā is a trust-based digital soul registry where users mint AI-generated personas, connect with others, and build on-chain trust networks.",
+    "primaryCategory": "social",
+    "heroImageUrl": "https://atma-mala.vercel.app/ammm.png"
+  },
   "accountAssociation": {
     "header": "",
     "payload": "",
     "signature": ""
-  },
-  "miniapp": {
-    "version": "1",
-    "name": "AtmaMala",
-    "homeUrl": "https://atma-mala.vercel.app/",
-    "iconUrl": "https://atma-mala.vercel.app/ammm.png",
-    "splashImageUrl": "https://atma-mala.vercel.app/amii.png",
-    "splashBackgroundColor": "#4B0082",
-    "primaryCategory": "social",
-    "tags": ["tag1", "tag2"]
   }
 }
