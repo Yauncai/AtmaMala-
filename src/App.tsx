@@ -3,10 +3,18 @@ import SplashScreen from './components/SplashScreen';
 import MintSoulScreen from './components/MintSoulScreen';
 import SoulProfileScreen from './components/SoulProfileScreen';
 import ExploreScreen from './components/ExploreScreen';
+import { sdk } from '@farcaster/miniapp-sdk';
 import Toast from './components/Toast';
 import { Soul, Screen } from './types/soul';
+import { generateImage } from './utils/generateImage';
+import { useEffect } from 'react';
+
 
 function App() {
+   useEffect(() => {
+        sdk.actions.ready();
+    }, []);
+
   const [currentScreen, setCurrentScreen] = useState<Screen>('splash');
   const [currentSoul, setCurrentSoul] = useState<Soul | null>(null);
   const [allSouls, setAllSouls] = useState<Soul[]>([]);
@@ -51,9 +59,19 @@ function App() {
   const handleMint = async (prompt: string) => {
     setIsGenerating(true);
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // await new Promise(resolve => setTimeout(resolve, 2000));
 
     const newSoul = generateSoulData(prompt);
+
+     try {
+      const imageUrl = await generateImage(
+        `${prompt}, mystical digital soul portrait, vibrant colors, fantasy art, high resolution`
+      );
+      newSoul.image = imageUrl;
+    } catch (err) {
+      console.error('AI image generation failed', err);
+    }
+    
     setCurrentSoul(newSoul);
     setAllSouls(prev => [...prev, newSoul]);
 

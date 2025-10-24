@@ -26,7 +26,14 @@ export default function SoulProfileScreen({ soul, onTrust, onExplore }: SoulProf
               <div className="relative">
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-soul-purple via-soul-pink to-soul-teal p-1">
                   <div className="w-full h-full rounded-full bg-soul-dark flex items-center justify-center">
-                    <span className="text-4xl">{soul.avatar}</span>
+                    {soul.image? (
+                      <img src={soul.image}
+                      alt={soul.name}
+                      className="w-full h-full object-cover rounded-full"
+                      />
+                    ):(
+                      <span className="text-4xl">{soul.avatar}</span>
+                    )}  
                   </div>
                 </div>
                 <div className="absolute inset-0 rounded-full border-2 border-soul-pink/30 animate-pulse-glow" />

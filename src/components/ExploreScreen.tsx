@@ -45,7 +45,15 @@ export default function ExploreScreen({ souls, currentSoulId, onBack, onTrustSou
                 <div className="relative flex-shrink-0">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-soul-purple via-soul-pink to-soul-teal p-0.5">
                     <div className="w-full h-full rounded-full bg-soul-dark flex items-center justify-center">
-                      <span className="text-2xl">{soul.avatar}</span>
+                       {soul.image ? (
+                        <img
+                          src={soul.image}
+                          alt={soul.name}
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      ) : (
+                        <span className="text-2xl">{soul.avatar}</span>
+                      )}
                     </div>
                   </div>
                   <div className="absolute inset-0 rounded-full border border-soul-pink/20 group-hover:border-soul-pink/40 transition-all" />
@@ -104,7 +112,15 @@ export default function ExploreScreen({ souls, currentSoulId, onBack, onTrustSou
               <div className="relative">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-soul-purple via-soul-pink to-soul-teal p-1">
                   <div className="w-full h-full rounded-full bg-soul-dark flex items-center justify-center">
-                    <span className="text-4xl">{selectedSoul.avatar}</span>
+                      {selectedSoul.image ? (
+                        <img
+                          src={selectedSoul.image}
+                          alt={selectedSoul.name}
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      ) : (
+                        <span className="text-4xl">{selectedSoul.avatar}</span>
+                      )}
                   </div>
                 </div>
                 <div className="absolute inset-0 rounded-full border-2 border-soul-pink/30 animate-pulse-glow" />

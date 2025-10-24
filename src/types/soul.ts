@@ -3,6 +3,7 @@ export interface Soul {
   name: string;
   bio: string;
   avatar: string;
+  image?: string;
   trustScore: number;
   walletAddress: string;
   createdAt: string;
