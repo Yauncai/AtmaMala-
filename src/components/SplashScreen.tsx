@@ -1,7 +1,6 @@
 import { Sparkles } from 'lucide-react';
 import FloatingParticles from './FloatingParticles';
 
-
 interface SplashScreenProps {
   onConnect: () => void;
 }
@@ -14,8 +13,7 @@ export default function SplashScreen({ onConnect }: SplashScreenProps) {
       <div className="text-center z-10 space-y-8 px-4">
         <div className="relative inline-block">
           <div className="absolute inset-0 bg-soul-pink/20 blur-3xl rounded-full animate-pulse-glow" />
-          <img src="./amii.png" alt="ĀtmaMālā Logo" style={{ width: '300px', height: '300px' }} />
-          {/* <Sparkles className="w-24 h-24 mx-auto text-soul-teal relative z-10" strokeWidth={1.5} /> */}
+          <Sparkles className="w-24 h-24 mx-auto text-soul-teal relative z-10" strokeWidth={1.5} />
         </div>
 
         <div className="space-y-3">
